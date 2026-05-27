@@ -28,9 +28,13 @@ body {
     background-color: var(--bg-black);
     color: var(--text-white);
     font-family: var(--font-body);
-    overflow: hidden; /* For digital signage, no scrolling */
-    width: 100vw;
-    height: 100vh;
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+    margin: 0;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Global Pulse Animation (Heartbeat) */
@@ -42,6 +46,8 @@ body {
 }
 
 .screen-container {
+    width: 1792px;
+    height: 952px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -99,6 +105,10 @@ body {
    Header Area
 ========================================= */
 .main-header {
+    height: auto;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    padding: 0;
     height: 20%;
     display: flex;
     justify-content: space-between;
@@ -109,10 +119,15 @@ body {
 .header-left {
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
 .live-badge {
+    height: 32px;
+    padding: 0 16px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -149,6 +164,10 @@ body {
 }
 
 .sub-title {
+    font-size: 60px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
     font-family: var(--font-body);
     color: var(--text-muted);
     font-size: 1.2rem;
@@ -157,6 +176,9 @@ body {
 }
 
 .main-title {
+    font-size: 72px;
+    line-height: 0.88;
+    letter-spacing: 0px;
     font-family: var(--font-display);
     font-size: 5rem;
     line-height: 0.9;
@@ -181,6 +203,9 @@ body {
 }
 
 .tagline {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-top: 16px;
     color: var(--text-muted);
     font-size: 1.2rem;
     font-weight: 600;
@@ -192,12 +217,15 @@ body {
 }
 
 .gym-brand {
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
 .logo-text {
+    font-size: 32px;
+    line-height: 1;
     font-family: var(--font-display);
     font-size: 3.5rem;
     line-height: 0.9;
@@ -224,6 +252,8 @@ body {
 }
 
 .logo-sub {
+    font-size: 16px;
+    margin-top: 6px;
     color: var(--text-muted);
     font-size: 1rem;
     margin-top: 5px;
@@ -235,6 +265,11 @@ body {
 ========================================= */
 .content-split {
     display: flex;
+    height: auto;
+    flex-grow: 1;
+    padding: 0;
+    gap: 32px;
+    display: flex;
     height: 72%;
     padding: 0 60px 20px 60px;
     gap: 40px;
@@ -242,6 +277,10 @@ body {
 
 /* LEFT SIDE - TIMELINE (60%) */
 .left-panel {
+    width: 1152px;
+    position: relative;
+    overflow: hidden;
+    padding: 24px;
     width: 60%;
     position: relative;
     overflow: hidden; /* For scrolling classes */
@@ -282,6 +321,10 @@ body {
 }
 
 .class-card {
+    height: 96px;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    gap: 16px;
     background: var(--bg-charcoal);
     border: 1px solid var(--bg-steel);
     padding: 25px 30px;
@@ -311,6 +354,10 @@ body {
 }
 
 .class-time {
+    font-size: 32px;
+    width: 64px;
+    line-height: 1;
+    letter-spacing: 1px;
     font-family: var(--font-display);
     font-size: 3.5rem;
     width: 180px;
@@ -326,6 +373,9 @@ body {
 }
 
 .class-name {
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 4px;
     font-family: var(--font-display);
     font-size: 2.5rem;
     color: var(--text-white);
@@ -333,6 +383,9 @@ body {
 }
 
 .class-details {
+    font-size: 16px;
+    line-height: 1.2;
+    gap: 8px;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -342,11 +395,20 @@ body {
 }
 
 .intensity {
+    font-size: 16px;
+    letter-spacing: 4px;
     color: var(--status-soon);
     letter-spacing: 2px;
 }
 
 .class-status {
+    height: 28px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 16px;
     border-radius: 4px;
     font-weight: 800;
@@ -392,12 +454,15 @@ body {
 
 /* RIGHT SIDE - PROMO (40%) */
 .right-panel {
+    width: 640px;
     width: 40%;
     display: flex;
     align-items: stretch;
 }
 
 .glass-panel {
+    padding: 32px;
+    border-radius: 16px;
     background: linear-gradient(135deg, rgba(20,20,20,0.9), rgba(10,10,10,0.95));
     border: 1px solid rgba(255,255,255,0.1);
     border-top: 1px solid rgba(57,255,20,0.3); /* Neon accent top */
@@ -425,6 +490,9 @@ body {
 }
 
 .promo-headline {
+    font-size: 52px;
+    line-height: 0.9;
+    margin-bottom: 16px;
     font-family: var(--font-display);
     font-size: 4.5rem;
     line-height: 0.9;
@@ -433,6 +501,9 @@ body {
 }
 
 .offer-block {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
     background: var(--accent-neon);
     color: var(--bg-black);
     padding: 15px 20px;
@@ -443,6 +514,8 @@ body {
 }
 
 .offer-main {
+    font-size: 28px;
+    line-height: 1.1;
     font-family: var(--font-display);
     font-size: 2.5rem;
     line-height: 1;
@@ -455,6 +528,10 @@ body {
 }
 
 .promo-desc {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    max-width: 90%;
     font-size: 1.3rem;
     color: var(--text-muted);
     line-height: 1.4;
@@ -463,6 +540,11 @@ body {
 }
 
 .cta-btn {
+    height: 64px;
+    padding: 0 24px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 24px;
     background: transparent;
     color: var(--accent-neon);
     border: 2px solid var(--accent-neon);
@@ -506,6 +588,9 @@ body {
 }
 
 .qr-container {
+    width: 120px;
+    height: 120px;
+    position: static;
     position: absolute;
     bottom: 40px;
     right: 40px;
@@ -542,6 +627,8 @@ body {
 }
 
 .qr-label {
+    font-size: 14px;
+    margin-top: 8px;
     margin-top: 8px;
     font-size: 0.9rem;
     font-weight: 800;
@@ -550,6 +637,8 @@ body {
 }
 
 .feature-chips {
+    gap: 8px;
+    margin-bottom: 32px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -557,6 +646,11 @@ body {
 }
 
 .chip {
+    height: 32px;
+    padding: 0 14px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
     padding: 6px 12px;
@@ -569,6 +663,11 @@ body {
    Footer Ticker
 ========================================= */
 .footer-ticker {
+    height: 56px;
+    padding: 0 24px;
+    width: 1920px;
+    left: -64px;
+    bottom: -64px;
     height: 8%;
     background: black;
     border-top: 1px solid var(--bg-steel);
@@ -582,6 +681,14 @@ body {
 }
 
 .ticker-content {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    animation: tickerScroll 30s linear infinite;
+    font-family: var(--font-display);
+    color: var(--text-white);
+    font-size: 24px;
+    letter-spacing: 2px;
     display: flex;
     white-space: nowrap;
     align-items: center;
