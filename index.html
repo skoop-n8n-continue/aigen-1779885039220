@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Digital Signage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="screen-container">
+        <!-- Background elements -->
+        <div class="bg-noise"></div>
+        <div class="bg-glow"></div>
+        <div class="bg-light-streaks"></div>
+
+        <header class="main-header">
+            <div class="header-left">
+                <div class="live-badge">
+                    <span class="live-dot"></span>
+                    LIVE CLASS SCHEDULE
+                </div>
+                <div class="header-titles">
+                    <h2 class="sub-title">CLASS SCHEDULE</h2>
+                    <h1 class="main-title">
+                        <span class="text-white">TRAIN HARD</span><br>
+                        <span class="text-accent flicker-text">STAY CONSISTENT</span>
+                    </h1>
+                    <p class="tagline">Strength &middot; Cardio &middot; HIIT &middot; Functional Training</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="gym-brand">
+                    <div class="logo-text glow-sweep">YOUR GYM<br>FITNESS CLUB</div>
+                    <p class="logo-sub">Open 24/7 &middot; All Levels Welcome</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-split">
+            <!-- Left 60%: Class Timeline -->
+            <section class="left-panel timeline-container">
+                <div class="timeline-line">
+                    <div class="timeline-progress"></div>
+                </div>
+                <div class="classes-wrapper" id="classes-list">
+                    <!-- Classes will be injected by JS -->
+                </div>
+            </section>
+
+            <!-- Right 40%: Promo Panel -->
+            <section class="right-panel">
+                <div class="promo-card glass-panel">
+                    <div class="promo-content">
+                        <h2 class="promo-headline" id="promo-headline">JOIN TODAY<br>GET STRONGER</h2>
+
+                        <div class="offer-block">
+                            <div class="offer-main">NO JOINING FEE</div>
+                            <div class="offer-sub">THIS WEEK ONLY</div>
+                        </div>
+
+                        <p class="promo-desc">Unlimited classes, expert trainers, and full access to all gym zones.</p>
+
+                        <button class="cta-btn heartbeat-pulse">START YOUR MEMBERSHIP</button>
+                        <p class="cta-secondary">Ask front desk or scan to join instantly</p>
+
+                        <div class="qr-container">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://example.com/join&color=39FF14&bgcolor=0A0A0A" alt="QR Code" class="qr-code">
+                            <div class="qr-scan-line"></div>
+                            <div class="qr-label">SCAN TO JOIN</div>
+                        </div>
+
+                        <div class="feature-chips">
+                            <span class="chip">Unlimited Access</span>
+                            <span class="chip">Certified Trainers</span>
+                            <span class="chip">Modern Equipment</span>
+                            <span class="chip">Group Classes</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-ticker">
+            <div class="ticker-content">
+                <span>CLASSES RUNNING ALL DAY</span><span class="sep">&middot;</span>
+                <span>JOIN TODAY</span><span class="sep">&middot;</span>
+                <span>FREE TRIAL AVAILABLE</span><span class="sep">&middot;</span>
+                <span>PERSONAL TRAINING</span><span class="sep">&middot;</span>
+                <span>GROUP FITNESS</span><span class="sep">&middot;</span>
+                <span>NO EXCUSES</span><span class="sep">&middot;</span>
+                <span>TRAIN HARD</span><span class="sep">&middot;</span>
+
+                <!-- Repeat for seamless scroll -->
+                <span>CLASSES RUNNING ALL DAY</span><span class="sep">&middot;</span>
+                <span>JOIN TODAY</span><span class="sep">&middot;</span>
+                <span>FREE TRIAL AVAILABLE</span><span class="sep">&middot;</span>
+                <span>PERSONAL TRAINING</span><span class="sep">&middot;</span>
+                <span>GROUP FITNESS</span><span class="sep">&middot;</span>
+                <span>NO EXCUSES</span><span class="sep">&middot;</span>
+                <span>TRAIN HARD</span><span class="sep">&middot;</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
